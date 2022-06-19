@@ -1,11 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
+# This Cooding is Coode in python 2 now it willbe renew soon
 
-import sys
+from six.moves import input
+from six.moves import input as raw_input
 import mechanize
-import cookielib
+try:
+    import cookielib
+except:
+    import http.cookiejar
+    cookielib = http.cookiejar
 import random
-
+#pip2 install mechanize
+#pip2 install requests
 
 
 
@@ -60,29 +67,29 @@ def search():
 		brute(password)
 
 		
-#welcome 
+#welcome Hackers
 def welcome():
 	wel = """
-
         +=========================================+
-        |..........   Facebook Crack   ...........|
+        |..........   Facebook Crack Brute   ...........|
         +-----------------------------------------+
-        |            #Author: Ha3MrX              | 
-        |	       Version 1.0                |
- 	|   https://www.youtube.com/c/HA-MRX      |
+        |            #Author: Technical Dipesh          | 
+        |	       Version 1.0                      |
+ 	|   https://www.youtube.com/channel/UCXuKDM3J_GkCxmdki8Hxh4w      |
         +=========================================+
-        |..........  Facebook Cracker  ...........|
+        |..........  fb-brute  ...........|
         +-----------------------------------------+\n\n
 """
 	total = open(passwordlist,"r")
 	total = total.readlines()
-	print wel 
-	print " [*] Account to crack : {}".format(email)
-	print " [*] Loaded :" , len(total), "passwords"
-	print " [*] Cracking, please wait ...\n\n"
+	print( wel )
+	print( " [*] Account to crack : {}".format(email) )
+	print( " [*] Loaded :" , len(total), "passwords" )
+	print( " [*] Cracking, please wait ...\n\n" )
 
 	
 if __name__ == '__main__':
 	main()
 
-
+#https://stackoverflow.com/questions/954834/how-do-i-use-raw-input-in-python-3
+#https://stackoverflow.com/a/62249675/9222942 cookielib
